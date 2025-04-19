@@ -10,43 +10,129 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
       defer
     ></script>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
     <header></header>
-    <nav class="navbar navbar-expand-lg lg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="/assets/images/Logo_Mats_Praiss.jpg" alt="Bootstrap" width="30" height="24">
-          </a>
-          
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="./index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./portfolio.html">Portfolio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./naam.html">Details</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Contact</a>
-            </li>
-            </li>
-          </ul>
+    <!-- navigatie begin -->
+    <div class="navigatie">
+      <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top trn">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+              <img src="/assets/images/Logo_Mats_Praiss.jpg" alt="Bootstrap" width="30" height="24">
+            </a>
+      
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav nav-underline">
+              <li class="nav-item">
+                <a class="nav-link " href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/portfolio.html">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/naam.html">Details</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Contact</a>
+              </li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <br><br><br>
+    <!-- navigatie einde -->
+    <div class="container">
+      <div class="row">
+        <!-- Main content -->
+        <main class="col-md-9">
+          <section id="contact" class="mb-3">
+            <article class="mb-3 pt-5">
+              <h2 class="text-uppercase fs-5 fw-bolder">Contactformulier</h2>
+              <p>
+                Vul het contactformulier in. <br />
+                Velden met <span>*</span> zijn verplicht.
+              </p>
+            </article>
+
+            <form action="#" method="post" class="form pt-3">
+              <fieldset class="row">
+                <legend class="text-uppercase fs-5 fw-bolder mb-3">Gegevens</legend>
+
+                <div class="col-6 mb-3">
+                  <label class="form-label">Voornaam <span>*</span></label>
+                  <input type="text" name="voornaam" class="form-control" required />
+                </div>
+
+                <div class="col-6 mb-3">
+                  <label class="form-label">Achternaam <span>*</span></label>
+                  <input type="text" name="achternaam" class="form-control" required />
+                </div>
+
+                <div class="col-6 mb-3">
+                  <label class="form-label">E-mail <span>*</span></label>
+                  <input type="email" name="email" class="form-control" required />
+                </div>
+
+                <div class="col-6 mb-3">
+                  <label class="form-label">Geboortedatum <span>*</span></label>
+                  <input type="date" name="geboortedatum" class="form-control" required />
+                </div>
+              </fieldset>
+
+              <fieldset class="row">
+                <legend class="text-uppercase fs-5 fw-bolder mb-3">Bericht</legend>
+                <div class="col-12 mb-3">
+                  <label class="form-label">Bericht <span>*</span></label>
+                  <textarea name="bericht" rows="5" class="form-control" required></textarea>
+                </div>
+              </fieldset>
+
+              <button type="submit" class="btn btn-primary">Verzenden</button>
+            </form>
+          </section>
+        </main>
+
+        <!-- Aside content -->
+        <aside class="col-md-3  ps-4">
+          <br>
+          <h2 class="text-uppercase fs-5 fw-bolder pt-3">Mats Praiss</h2>
+          <img id="profiel" src="./assets/images/20240425_145832~2.jpg" alt="Profielafbeelding" class="img-fluid" /><br><br>
+      <p>Email:<a href="mailto:mats.praiss@student.ap.be"> mats.praiss@student.ap.be</a></p>
+      <p><a class="instagram list-inline-item" href="https://www.instagram.com/een_mats/" target="_blank">
+          <i class="bi bi-instagram blauwgrijs fs-6"> Instagram</i></a></p>
+        </aside>
+      </div>
+    </div>
+    <!-- footer begin -->
+    <!-- footer begin -->
+    <footer class="container-fluid bg-light text-center h6 small m-4">
+      <div class="row">
+        <div class="col-md-3">
+          <p>Copyright © 2025 Mats Praiss</p>
+        </div>
+        <div class="col-md-3">
+          <p>Website gemaakt door Mats Praiss</p>
+        </div>
+        <div class="col-md-3">
+          <p>Alle rechten voorbehouden</p>
         </div>
       </div>
-    </nav>
-    <main></main>
-    <aside></aside>
-    <footer></footer>
+    </footer>
+    <!-- footer einde -->
   </body>
 </html>

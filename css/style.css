@@ -1,3 +1,70 @@
-.carouselExampleAutoplaying {
-  width: 50px;
+* {
+  background-color: #ececeb;
 }
+
+body {
+  background-color: #ececeb;
+}
+
+.nav-link {
+  color: #0d0f4e;
+}
+
+.home {
+  color: #03c0db;
+}
+
+a {
+  text-decoration: none;
+  color: #03c0db;
+}
+
+.instagram {
+  color: rgb(192, 11, 192);
+}
+
+.welkom {
+  margin-bottom: 100;
+  padding-bottom: 0;
+}
+
+span {
+  color: red;
+}
+
+#profiel {
+  width: 100%;
+  height: auto;
+}
+
+#contactmain {
+  border: 1px solid #03c0db;
+}
+
+.primary {
+  color: #03c0db;
+}
+
+.nav-link.active {
+  color: #03c0db !important;
+}
+
+.nav-link.active:hover {
+  color: #03c0db !important;
+}
+
+/* .carousel {
+  background-color: #03c0db;
+  height: 25%;
+} */
+
+#carouselExampleAutoplaying {
+  margin-top: 5rem;
+}
+
+/* #gip_website {
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  align-self: center;
+} */
