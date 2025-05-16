@@ -3,24 +3,34 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mats Praiss - Home</title>
+    <title>Mats Praiss - Contact</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-      defer
-    ></script>
-    <link rel="stylesheet" href="./css/style.css">
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+    defer
+  ></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>  
+
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="js/script.js" defer></script>
   </head>
   <body>
     <header></header>
@@ -42,7 +52,7 @@
                 <a class="nav-link" href="/portfolio.html">Portfolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/project.html">Details</a>
+                <a class="nav-link" href="/project.html">Over mij</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" href="#">Contact</a>
@@ -73,12 +83,17 @@
               <fieldset class="row">
                 <legend class="text-uppercase fs-5 fw-bolder mb-3">Gegevens</legend>
 
-                <div class="col-6 mb-3">
+                <div class="col-5 mb-3">
                   <label class="form-label">Voornaam <span>*</span></label>
                   <input type="text" name="voornaam" class="form-control" required />
                 </div>
 
-                <div class="col-6 mb-3">
+                <div class="col-2 mb-3">
+                  <label class="form-label">Tussenvoegsel <span></span></label>
+                  <input type="text" name="Tussenvoegsel" class="form-control" />
+                </div>
+
+                <div class="col-5 mb-3">
                   <label class="form-label">Achternaam <span>*</span></label>
                   <input type="text" name="achternaam" class="form-control" required />
                 </div>
@@ -86,11 +101,6 @@
                 <div class="col-6 mb-3">
                   <label class="form-label">E-mail <span>*</span></label>
                   <input type="email" name="email" class="form-control" required />
-                </div>
-
-                <div class="col-6 mb-3">
-                  <label class="form-label">Geboortedatum</label>
-                  <input type="date" name="geboortedatum" class="form-control" required />
                 </div>
               </fieldset>
 
@@ -109,19 +119,24 @@
         </main>
 
         <!-- Aside content -->
-        <aside class="col-md-3  ps-4">
+        <aside class="col-md-3 border-start ps-4">
           <br>
           <h2 class="text-uppercase fs-5 fw-bolder pt-3">Mats Praiss</h2>
           <img id="profiel" src="./assets/images/20240425_145832~2.jpg" alt="Profielafbeelding" class="img-fluid w-100" /><br><br>
-      <p>Email:<a href="mailto:mats.praiss@student.ap.be"> mats.praiss@student.ap.be</a></p>
-      <p><a class="instagram list-inline-item" href="https://www.instagram.com/een_mats/" target="_blank">
+          <p>E-mail:<a href="mailto:mats.praiss@student.ap.be"> mats.praiss@student.ap.be</a></p>
+          <p><a class="instagram list-inline-item" href="https://www.instagram.com/een_mats/" target="_blank">
           <i class="bi bi-instagram blauwgrijs fs-6"> Instagram</i></a></p>
+            <hr>
+          <div id="map"></div>
+           <!-- <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19995.535486548943!2d4.421743680263092!3d51.21093402660389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f772a189dcd9%3A0x283be84547a68ada!2sBorgerhout%2C%20Antwerpen!5e0!3m2!1snl!2sbe!4v1747404895092!5m2!1snl!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+
+
         </aside>
       </div>
     </div>
     <!-- footer begin -->
     <!-- footer begin -->
-    <footer class="container-fluid bg-light text-center h6 small m-4">
+    <!-- <footer class="container-fluid bg-light text-center h6 small m-4">
       <div class="row">
         <div class="col-md-3">
           <p>Copyright © 2025 Mats Praiss</p>
@@ -129,11 +144,8 @@
         <div class="col-md-3">
           <p>Website gemaakt door Mats Praiss</p>
         </div>
-        <div class="col-md-3">
-          <p>Alle rechten voorbehouden</p>
-        </div>
       </div>
-    </footer>
+    </footer> -->
     <!-- footer einde -->
   </body>
 </html>

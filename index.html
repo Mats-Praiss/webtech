@@ -20,14 +20,16 @@
       crossorigin="anonymous"
       defer
     ></script>
+
     <link rel="stylesheet" href="/css/style.css">
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <!-- carousel begin -->
     <header>
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-theme="dark">
-        <div class="carousel-inner w-50 mx-auto m-2">
-          <div class="carousel-item active"  height="50px">
+        <div class="carousel-inner myCarousel mx-auto m-2">
+          <div class="carousel-item active" data-toggle="collapse"  height="50px">
             <a href="http://mats.kesug.com/" target="_blank"><img src="/assets/images/gip_website_groot.jpg" id="gip_website" class="d-block w-100" alt="GIP website"></a>
           </div>
           <div class="carousel-item active"  height="50px">
@@ -54,8 +56,10 @@
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
               <img src="/assets/images/Logo_Mats_Praiss.jpg" alt="Bootstrap" width="30" height="24">
-            </a>
-      
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav nav-underline">
@@ -66,7 +70,7 @@
                 <a class="nav-link" href="/portfolio.html">Portfolio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/project.html">Details</a>
+                <a class="nav-link" href="/project.html">Over mij</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/contact.html">Contact</a>
@@ -97,10 +101,11 @@
     <aside class="col-md-3 border-start ps-5">
       <h2 class="text-uppercase fs-5 fw-bolder pt-3">contact</h2>
       <p>Naam: Mats Praiss</p>
-      <p>Email:<a href="mailto:mats.praiss@student.ap.be"> mats.praiss@student.ap.be</a></p>
+      <p>E-mail:<a href="mailto:mats.praiss@student.ap.be"> mats.praiss@student.ap.be</a></p>
       <p><a class="instagram list-inline-item" href="https://www.instagram.com/een_mats/" target="_blank">
           <i class="bi bi-instagram blauwgrijs fs-6"> Instagram</i></a></p>
       <p>Klik <a href="./contact.html">hier</a> om naar de contact pagina te gaan</p>
+
     </aside>
     <!-- aside contact einde -->
     <!-- footer begin -->
@@ -111,9 +116,6 @@
         </div>
         <div class="col-md-3">
           <p>Website gemaakt door Mats Praiss</p>
-        </div>
-        <div class="col-md-3">
-          <p>Alle rechten voorbehouden</p>
         </div>
       </div>
     </footer>
