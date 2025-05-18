@@ -29,7 +29,9 @@
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
      crossorigin=""></script>  
 
+  <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/style.css">
+  
   <script src="js/script.js" defer></script>
   </head>
   <body>
@@ -42,6 +44,9 @@
               <img src="/assets/images/Logo_Mats_Praiss.jpg" alt="Bootstrap" width="30" height="24">
             </a>
       
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav nav-underline">
@@ -79,7 +84,7 @@
               </p>
             </article>
 
-            <form action="#" method="post" class="form pt-3">
+            <!-- <form action="#" method="post" class="form pt-3">
               <fieldset class="row">
                 <legend class="text-uppercase fs-5 fw-bolder mb-3">Gegevens</legend>
 
@@ -113,13 +118,47 @@
               </fieldset>
 
               <button type="submit" class="btn btn-primary">Verzenden</button>
-            </form>
+            </form> -->
+
+            
+              <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+                <fieldset class="row">
+                  <legend class="text-uppercase fs-5 fw-bolder mb-3">Gegevens</legend>
+                      <div class="form-group col-8 mb-3">
+                        <label for="name">Voornaam<span>*</span></label>
+                        <input type="text" class="form-control" id="voornaam" name="voornaam" required>
+                      </div>
+                      <div class="form-group col-4 mb-3">
+                        <label for="text">Tussenvoegsel</label>
+                        <input type="text" class="form-control" id="tussenvoegsel" name="tussenvoegsel">
+                      </div>
+                      <div class="form-group col-8 mb-3">
+                        <label for="name">Achternaam<span>*</span></label>
+                        <input type="text" class="form-control" id="achternaam" name="achternaam" required>
+                      </div>
+                      <div class="form-group col-12 mb-3">
+                        <label for="email">E-mail<span>*</span></label>
+                        <input class="form-control" rows="10" id="email" name="email" required></input>
+                        <br>
+                      </div>
+                      <div class="form-group">
+                        <div data-netlify-recaptcha="true"></div>
+                      </div>
+                </fieldset>
+                <fieldset class="row">
+                  <div class="form-group col-12 mb-3">
+                    <label for="message">Bericht<span>*</span></label>
+                    <textarea class="form-control" rows="10" id="message" name="message" required></textarea>
+                  </div>
+                </fieldset>
+                  <button type="submit" class="btn btn-primary">Verzenden</button>
+              </form>
           </section>
           <hr />
         </main>
-
+      
         <!-- Aside content -->
-        <aside class="col-md-3 border-start ps-4">
+        <aside class="col-md-3 border-start ps-5">
           <br>
           <h2 class="text-uppercase fs-5 fw-bolder pt-3">Mats Praiss</h2>
           <img id="profiel" src="./assets/images/20240425_145832~2.jpg" alt="Profielafbeelding" class="img-fluid w-100" /><br><br>
@@ -135,8 +174,7 @@
       </div>
     </div>
     <!-- footer begin -->
-    <!-- footer begin -->
-    <!-- <footer class="container-fluid bg-light text-center h6 small m-4">
+    <footer class="container-fluid bg-light text-center h6 small m-4">
       <div class="row">
         <div class="col-md-3">
           <p>Copyright © 2025 Mats Praiss</p>
@@ -145,7 +183,7 @@
           <p>Website gemaakt door Mats Praiss</p>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <!-- footer einde -->
   </body>
 </html>

@@ -10,7 +10,7 @@ var marker = L.marker([51.21225134996034, 4.432215024257159]).addTo(map);
 marker.bindPopup("<b>Borgerhout</b><br>Antwerpen, België").openPopup();
 
 var greenIcon = L.icon({
-  iconUrl: "assets/images/20240425_145832~2.jpg",
+  iconUrl: "./assets/Logo_Mats_Praiss?jpg",
 
   iconSize: [38, 95], // size of the icon
   shadowSize: [50, 64], // size of the shadow

@@ -71,23 +71,6 @@ span {
   width: 15rem !important;
 }
 
-.btn-primary {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: #03c0db;
-  --bs-btn-border-color: #03c0db;
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #03c0db;
-  --bs-btn-hover-border-color: #03c0db;
-  --bs-btn-focus-shadow-rgb: 49, 132, 253;
-  --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #03c0db;
-  --bs-btn-active-border-color: #03c0db;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: #03c0db;
-  --bs-btn-disabled-border-color: #03c0db;
-}
-
 .myCarousel {
   height: 500px;
   align-items: center;
@@ -111,9 +94,40 @@ span {
 }
 
 #profiel {
-  width: 20rem !important;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  width: 15rem !important;
+}
+
+.navbar-brand {
+  padding-left: 1rem;
+}
+
+.form-group {
+  display: inline;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #03c0db;
+  --bs-btn-border-color: #03c0db;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #03c0db;
+  --bs-btn-hover-border-color: #03c0db;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #03c0db;
+  --bs-btn-active-border-color: #03c0db;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #03c0db;
+  --bs-btn-disabled-border-color: #03c0db;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%230d0f4e' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 /* #gip_website {
